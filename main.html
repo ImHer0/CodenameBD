@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Happi Birthday</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="index.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
+	</head>
+	<body>
+        <video id="playAudio">
+            <source src="happy.webm" type="video/webm">
+        </video>
+        <div class="text">
+            <h2 style="font-size:4.5vw">Happy Birthday!!!</h2>
+        </div>
+        <div class="text">
+        <p style="font-size:2vw">!! </p>
+        <button id="button" type="button" class="button-64"><span>Click Here</span></button>
+        <p style="font-size:2vw"> !!</p>
+        <audio id="playAudio">
+            <source src="happy.mp3" type="audio/mp3">
+        </audio>
+        <script>
+            var button = document.getElementById("button");
+            var audio = document.getElementById("playAudio");
+          
+            button.addEventListener("click", function() {
+              audio.play();
+              setTimeout(function() {window.open("https://www.roblox.com/games/12946810287/Quirky-Land")}, 1000);
+            });
+          </script>
+        </div>
+        <canvas id="confetti"></canvas>
+        <div id="cat-container">            
+            <img id="cat" src="cat.gif" draggable="true" onclick="playSound(); this.classList.add('rotate');" alt="YIPPE HAPPY BIRTHDAYYYY">
+            <script>
+                function playSound() {
+                    var audio = new Audio('yippe.mp3');
+                    audio.play();
+                }
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+            <script src="confetti.js"></script>
+        </div>
+        <div>
+            <img id="cake" src="cake.png" onclick="playSound2();">
+            <script>
+                function playSound2() {
+                    var audio = new Audio('happy2.mp3');
+                    audio.play();                    
+                }
+            </script>
+        </div>
+	</body>
+</html>
